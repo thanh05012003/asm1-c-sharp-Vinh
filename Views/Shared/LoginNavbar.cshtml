@@ -1,0 +1,121 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - ASM</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/ASM.styles.css" asp-append-version="true" />
+
+</head>
+<body>
+    <header>
+
+        <div class="container-fluid fixed-top px-0 wow fadeIn">
+            <div class="top-bar row gx-0 align-items-center bg-black d-none d-lg-flex text-white text-center">
+                <small>
+                    <i class="fa fa-map-marker-alt me-2 "></i> CLEARANCE SALE UP TO 70%
+                </small>
+
+            </div>
+
+
+            <nav class="navbar navbar-expand-lg navbar-light py-lg-0 px-lg-5 wow fadeIn" data-wow-delay="0.1s">
+                <ul class="navbar-nav flex-grow-1">
+
+                    <li class="nav-item">
+                        <a class="navbar-brand ms-lg-0 " asp-controller="Home" asp-action="Index">
+                            <h1 class="fw-bold  m-0">HA<span class="r">NOI</span>RIOT</h1>
+                        </a>
+                    </li>
+
+
+
+                    <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse"
+                            data-bs-target="#navbarCollapse">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarCollapse">
+                        <div class="navbar-nav ms-auto p-4 p-lg-0">
+                    <li class="nav-item">
+                        <a asp-controller="Home" asp-action="Index" class="nav-item nav-link active">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a asp-controller="Home" asp-action="LienHe" class="nav-item nav-link">Liên Hệ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a asp-controller="Home" asp-action="ShowListProduct" class="nav-item nav-link">Products</a>
+                    </li>
+                     <li class="nav-item">
+                            <a asp-controller="Home" asp-action="ShowCart"  class="nav-item nav-link">Giỏ Hàng</a>
+                        </li>
+
+        </div>
+        <li class="nav-item">
+            <a asp-controller="Home" asp-action="LogIn" class="nav-item nav-link">Đăng nhập</a>
+        </li>
+        <li class="nav-item">
+            <a asp-controller="Home" asp-action="Register" class="nav-item nav-link">Đăng ký</a>
+        </li> 
+
+        </div>
+        </ul>
+        </nav>
+
+        </div>
+    </header>
+
+    <div class="container-fluid px-5" style="margin-top: 150px">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="">
+        <div class="row container-fluid pt-3 p-5 mt-3">
+            <div class="col-2">
+                <a href="" class="nav-link active mb-1">ABOUT</a>
+                <a href="" class="nav-link active mb-1">COLLECTION</a>
+                <a href="" class="nav-link active mb-1">MAGAZINE</a>
+            </div>
+            <div class="col-2">
+                <a href="" class="nav-link active mb-1">LIÊN HỆ</a>
+                <a href="" class="nav-link active mb-1">TÀI KHOẢN</a>
+                <a href="crud" class="nav-link active mb-1" href="#crud">CRUD</a>
+                <a href="crud1" class="nav-link active mb-1" href="#crud1">CRUD1</a>
+                <a class="nav-link active pe-5" href="doimk" href="#doimk">Đổi Mật Khẩu</a>
+            </div>
+            <div class="col-2">
+                <a href="" class="nav-link active mb-1">TUYỂN DỤNG</a>
+                <a href="" class="nav-link active mb-1">ĐỔI &amp; TRẢ HÀNG</a>
+                <a href="" class="nav-link active mb-1">CHÍNH SÁCH BẢO MẬT</a>
+            </div>
+            <div class="col-2"></div>
+            <div class="col-4">
+                <a href="" class="nav-link active mb-1">
+                    ĐĂNG KÍ THÔNG TIN ĐỂ NHẬN ĐƯỢC CẬP NHẬT MỚI NHẤT VỀ CÁC SẢN PHẨM, CHIẾN
+                    DỊCH VÀ COLLAB CỦA HANOI-RIOT
+                </a>
+                <p class="mt-2">Email</p>
+                <input class="form-control me-2" type="Email" placeholder="Email" aria-label="Email">
+                <div class="d-grid gap-2">
+                    <button type="button" class="btn btn-secondary mt-3">Đăng Ký</button>
+                </div>
+                <p class="mt-4">
+                    BẠN CÓ THỂ HỦY ĐĂNG KÝ BẤT CỨ LÚC NÀO. ĐỂ TÌM HIỂU THÊM, BẠN CÓ THỂ TRUY
+                    CẬP TRANG [Chính sách bảo mật].
+                </p>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer -->
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/js/NavBar.js"></script>
+    @await RenderSectionAsync("Scripts", false)
+</body>
+</html>
